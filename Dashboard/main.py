@@ -7,7 +7,7 @@ import seaborn as sns
 st.set_page_config(page_title="Air Quality from Dongsi Analysis by Zaxxy")
 
 # Load dataset
-data = pd.read_csv('data.csv')
+data = pd.read_csv("data.csv")
 
 # Title of the dashboard
 st.title('Air Quality Analysis Dashboard: Dongsi Station')
