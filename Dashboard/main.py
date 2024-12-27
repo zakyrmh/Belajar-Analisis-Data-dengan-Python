@@ -9,6 +9,10 @@ st.set_page_config(page_title="Air Quality from Dongsi Analysis by Zaxxy")
 # Load dataset
 data = pd.read_csv("data.csv")
 
+import os
+print("Current working directory:", os.getcwd())
+print("Files in directory:", os.listdir("."))
+
 # Title of the dashboard
 st.title('Air Quality Analysis Dashboard: Dongsi Station')
 
