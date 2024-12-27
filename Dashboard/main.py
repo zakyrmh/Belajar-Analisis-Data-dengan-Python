@@ -2,16 +2,19 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Title page
 st.set_page_config(page_title="Air Quality from Dongsi Analysis by Zaxxy")
 
 # Load dataset
-data = pd.read_csv("data.csv")
+# Dapatkan path absolut dari file `main.py`
+base_dir = os.path.dirname(os.path.abspath(__file__))
+# Gabungkan path dengan nama file `data.csv`
+file_path = os.path.join(base_dir, "data.csv")
 
-import os
-print("Current working directory:", os.getcwd())
-print("Files in directory:", os.listdir("."))
+# Baca file CSV
+data = pd.read_csv(file_path)
 
 # Title of the dashboard
 st.title('Air Quality Analysis Dashboard: Dongsi Station')
